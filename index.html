@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Friendship, Monica! 💙</title>
+<style>
+:root{--bg:#eaf3ff;--card:#ffffff;--ink:#12305a;--sub:#4a6a99;--accent:#2f6df6;--accent2:#7cc4ff;--shadow:rgba(47,109,246,.18);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1630;--card:#142446;--ink:#e6f0ff;--sub:#9db9e6;--accent:#6aa2ff;--accent2:#3a7bd5;--shadow:rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1630;--card:#142446;--ink:#e6f0ff;--sub:#9db9e6;--accent:#6aa2ff;--accent2:#3a7bd5;--shadow:rgba(0,0,0,.4);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Trebuchet MS",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;overflow-x:hidden}
+main{max-width:640px;margin:0 auto;padding:24px 16px 48px}
+.hero{text-align:center;padding:36px 16px;border-radius:28px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 12px 30px var(--shadow)}
+.hero h1{margin:8px 0;font-size:2.2rem;line-height:1.15}
+.hero p{margin:0;opacity:.95}
+.big{font-size:3rem}
+section{background:var(--card);border-radius:22px;padding:20px;margin-top:18px;box-shadow:0 6px 18px var(--shadow)}
+h2{margin:0 0 10px;font-size:1.25rem;color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:var(--bg);color:var(--ink);padding:6px 12px;border-radius:999px;font-size:.95rem}
+button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:12px 20px;background:var(--accent);color:#fff;font-weight:700;box-shadow:0 4px 12px var(--shadow)}
+button:active{transform:scale(.97)}
+.out{margin-top:14px;min-height:3em;font-size:1.05rem;color:var(--sub)}
+figure{margin:18px auto 0;width:180px;text-align:center}
+.ph{width:180px;height:180px;border-radius:20px;border:2px dashed var(--accent);background:var(--card);display:flex;align-items:center;justify-content:center;font-size:2.6rem;box-shadow:0 6px 18px var(--shadow)}
+figcaption{margin-top:8px;color:var(--sub);font-size:.95rem}
+footer{text-align:center;color:var(--sub);margin-top:24px;font-size:.95rem}
+.fl{position:fixed;top:-40px;font-size:1.6rem;pointer-events:none;animation:fall linear forwards;z-index:5}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.7}}
+@media (prefers-reduced-motion:reduce){.fl{display:none}}
+</style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <div class="big">💙✨</div>
+    <h1>Happy Friendship, Monica!</h1>
+    <p>For the friend who brings the sparkle (and the snacks).</p>
+  </div>
+
+  <figure>
+    <div class="ph" role="img" aria-label="Photo placeholder">🖼️</div>
+    <figcaption>Cute Monica’s pic</figcaption>
+  </figure>
+
+  <section>
+    <h2>Why you’re awesome</h2>
+    <div class="tags">
+      <span>🌟 Full of life</span><span>💙 Blue-everything</span><span>📚 Manhwa binger</span><span>🎌 Anime fan</span><span>🍜 Professional foodie</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>A little wish for you</h2>
+    <button id="wishBtn">Tap for a wish 💌</button>
+    <div class="out" id="wish">Tap the button!</div>
+  </section>
+
+  <section>
+    <h2>What are we eating?</h2>
+    <button id="foodBtn">Pick our snack 🍕</button>
+    <div class="out" id="food">Hungry? Let fate decide.</div>
+  </section>
+
+  <section>
+    <h2>Which anime hero are you today?</h2>
+    <button id="modeBtn">Reveal my mood 🎌</button>
+    <div class="out" id="mode">Press to find out.</div>
+  </section>
+
+  <footer>Made with 💙 by your friend, Suffian</footer>
+</main>
+<script>
+function pick(a){return a[Math.floor(Math.random()*a.length)]}
+function rain(list){
+  for(var i=0;i<14;i++){
+    var s=document.createElement('div');
+    s.className='fl';
+    s.textContent=pick(list);
+    s.style.left=Math.random()*95+'vw';
+    s.style.animationDuration=(3+Math.random()*3)+'s';
+    document.body.appendChild(s);
+    setTimeout(function(el){el.remove()},6500,s);
+  }
+}
+var wishes=["May your days be as bright as your favorite shade of blue. 💙","Wishing you endless new chapters, both in manhwa and in real life. 📚","Thank you for being such a fun, kind friend. 🌟","May every episode you watch end on a perfect cliffhanger. 🎌","Here’s to many more snack runs and silly memories. 🍜"];
+var foods=["Crispy fries 🍟","A big bowl of ramen 🍜","Pizza slices 🍕","Soft, sweet dessert 🍰","Crunchy chips and chai 🍿","Biryani, obviously 🍛"];
+var modes=["Calm and clever strategist 💙","Energetic main character 🌟","Chill slice-of-life legend ☕","Unstoppable shonen hero 🔥","Cozy snack-loving sidekick 🍙"];
+document.getElementById('wishBtn').onclick=function(){document.getElementById('wish').textContent=pick(wishes);rain(['💙','✨','🌸']);};
+document.getElementById('foodBtn').onclick=function(){document.getElementById('food').textContent='Today we’re having: '+pick(foods);rain(['🍜','🍕','🍟','🍰']);};
+document.getElementById('modeBtn').onclick=function(){document.getElementById('mode').textContent='You are a '+pick(modes);rain(['⭐','💙','🎌']);};
+</script>
+</body>
+</html>
