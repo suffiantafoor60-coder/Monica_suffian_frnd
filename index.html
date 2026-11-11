@@ -3,42 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Happy Friendship, Monica! 💙</title>
+<title>Happy Friendship, Monica! 💗</title>
 <style>
-:root{--bg:#eaf3ff;--card:#ffffff;--ink:#12305a;--sub:#4a6a99;--accent:#2f6df6;--accent2:#7cc4ff;--shadow:rgba(47,109,246,.18);
+:root{--bg:#ffeef6;--card:#ffffff;--ink:#4a1634;--sub:#9a4a73;--accent:#ff4d9d;--accent2:#ff9ccc;--shadow:rgba(255,77,157,.25);
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1630;--card:#142446;--ink:#e6f0ff;--sub:#9db9e6;--accent:#6aa2ff;--accent2:#3a7bd5;--shadow:rgba(0,0,0,.4);color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0b1630;--card:#142446;--ink:#e6f0ff;--sub:#9db9e6;--accent:#6aa2ff;--accent2:#3a7bd5;--shadow:rgba(0,0,0,.4);color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a0d1d;--card:#3d1429;--ink:#ffe6f1;--sub:#f0a8cc;--accent:#ff6fb1;--accent2:#c2307a;--shadow:rgba(0,0,0,.45);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#2a0d1d;--card:#3d1429;--ink:#ffe6f1;--sub:#f0a8cc;--accent:#ff6fb1;--accent2:#c2307a;--shadow:rgba(0,0,0,.45);color-scheme:dark}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Trebuchet MS",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Trebuchet MS",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;overflow-x:hidden;
+cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M16 28S3 20 3 11a6.5 6.5 0 0 1 13-2 6.5 6.5 0 0 1 13 2c0 9-13 17-13 17z' fill='%23ff4d9d' stroke='white' stroke-width='2'/></svg>") 16 16,auto}
+button,input{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 32 32'><path d='M16 28S3 20 3 11a6.5 6.5 0 0 1 13-2 6.5 6.5 0 0 1 13 2c0 9-13 17-13 17z' fill='%23ff2e8a' stroke='white' stroke-width='2'/></svg>") 18 18,pointer}
 main{max-width:640px;margin:0 auto;padding:24px 16px 48px}
 .hero{text-align:center;padding:36px 16px;border-radius:28px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 12px 30px var(--shadow)}
 .hero h1{margin:8px 0;font-size:2.2rem;line-height:1.15}
-.hero p{margin:0;opacity:.95}
+.hero p{margin:0}
 .big{font-size:3rem}
 section{background:var(--card);border-radius:22px;padding:20px;margin-top:18px;box-shadow:0 6px 18px var(--shadow)}
 h2{margin:0 0 10px;font-size:1.25rem;color:var(--accent)}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
-.tags span{background:var(--bg);color:var(--ink);padding:6px 12px;border-radius:999px;font-size:.95rem}
-button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:12px 20px;background:var(--accent);color:#fff;font-weight:700;box-shadow:0 4px 12px var(--shadow)}
+.tags span{background:var(--bg);padding:6px 12px;border-radius:999px;font-size:.95rem}
+button{font:inherit;border:0;border-radius:999px;padding:12px 20px;background:var(--accent);color:#fff;font-weight:700;box-shadow:0 4px 12px var(--shadow)}
 button:active{transform:scale(.97)}
 .out{margin-top:14px;min-height:3em;font-size:1.05rem;color:var(--sub)}
 figure{margin:18px auto 0;width:180px;text-align:center}
 .ph{width:180px;height:180px;border-radius:20px;border:2px dashed var(--accent);background:var(--card);display:flex;align-items:center;justify-content:center;font-size:2.6rem;box-shadow:0 6px 18px var(--shadow)}
 figcaption{margin-top:8px;color:var(--sub);font-size:.95rem}
+.bar{height:18px;border-radius:999px;background:var(--bg);overflow:hidden;margin-top:12px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent2),var(--accent));transition:width 1.6s ease}
 footer{text-align:center;color:var(--sub);margin-top:24px;font-size:.95rem}
-.fl{position:fixed;top:-40px;font-size:1.6rem;pointer-events:none;animation:fall linear forwards;z-index:5}
+.game{position:relative;height:200px;margin-top:12px;border-radius:18px;background:var(--bg);overflow:hidden;touch-action:manipulation}
+.tg{position:absolute;font-size:2rem;background:none;box-shadow:none;padding:0;animation:pop .25s}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.row button.h{font-size:1.6rem;padding:10px 18px}
+input[type=date]{font:inherit;padding:10px 14px;border-radius:999px;border:2px solid var(--accent2);background:var(--bg);color:var(--ink);margin-right:8px}
+.mem{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.mc{aspect-ratio:1;font-size:1.8rem;border-radius:16px;padding:0;background:var(--accent2)}
+.mc.on{background:var(--bg)}
+.pz{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.pz input{font:inherit;padding:10px 14px;border-radius:999px;border:2px solid var(--accent2);background:var(--bg);color:var(--ink);width:170px}
+.tt{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:15;padding:10px 14px}
+#lock{position:fixed;inset:0;z-index:20;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
+#lock .box{background:var(--card);padding:28px 22px;border-radius:26px;box-shadow:0 12px 30px var(--shadow);max-width:340px;width:100%}
+#lock input{width:100%;padding:12px 16px;border-radius:999px;border:2px solid var(--accent2);background:var(--bg);color:var(--ink);font:inherit;text-align:center;margin:12px 0}
+.shake{animation:sh .4s}
+@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+#msg{color:var(--sub);min-height:1.5em;font-size:.95rem}
+.hidden{display:none!important}
+.fl,.tr{position:fixed;pointer-events:none;z-index:30}
+.fl{top:-40px;font-size:1.6rem;animation:fall linear forwards}
+.tr{font-size:1rem;animation:fade .8s forwards}
 @keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.7}}
-@media (prefers-reduced-motion:reduce){.fl{display:none}}
+@keyframes fade{to{transform:translateY(18px) scale(.3);opacity:0}}
+@media (prefers-reduced-motion:reduce){.fl,.tr{display:none}}
 </style>
 </head>
 <body>
-<main>
+<div id="lock">
+  <div class="box" id="lbox">
+    <div class="big">🔒💗</div>
+    <h2>Just for Monica</h2>
+    <div>Enter the secret password to open your surprise.</div>
+    <input id="pw" type="password" placeholder="Password" autocomplete="off">
+    <button id="go">Unlock ✨</button>
+    <div id="msg">Hint: it’s your name, in lowercase.</div>
+  </div>
+</div>
+
+<main id="app" class="hidden">
   <div class="hero">
-    <div class="big">💙✨</div>
+    <div class="big">💗✨</div>
     <h1>Happy Friendship, Monica!</h1>
-    <p>For the friend who brings the sparkle (and the snacks).</p>
+    <p>For my bestie who brings the sparkle (and the snacks).</p>
   </div>
 
   <figure>
@@ -49,8 +86,15 @@ footer{text-align:center;color:var(--sub);margin-top:24px;font-size:.95rem}
   <section>
     <h2>Why you’re awesome</h2>
     <div class="tags">
-      <span>🌟 Full of life</span><span>💙 Blue-everything</span><span>📚 Manhwa binger</span><span>🎌 Anime fan</span><span>🍜 Professional foodie</span>
+      <span>🌟 Full of life</span><span>💗 Pink vibes</span><span>📚 Manhwa binger</span><span>🎌 Anime fan</span><span>🍜 Professional foodie</span>
     </div>
+  </section>
+
+  <section>
+    <h2>Friendship meter</h2>
+    <button id="meterBtn">Measure our friendship 💞</button>
+    <div class="bar"><i id="fill"></i></div>
+    <div class="out" id="meter">Press the button to see the result.</div>
   </section>
 
   <section>
@@ -71,27 +115,167 @@ footer{text-align:center;color:var(--sub);margin-top:24px;font-size:.95rem}
     <div class="out" id="mode">Press to find out.</div>
   </section>
 
-  <footer>Made with 💙 by your friend, Suffian</footer>
+  <section>
+    <h2>Open when you need a smile</h2>
+    <button id="secretBtn">Open secret note 🎁</button>
+    <div class="out" id="secret">Only for bad days.</div>
+  </section>
+
+  <section>
+    <h2>Catch the snacks! 🍩</h2>
+    <button id="gameBtn">Start (15 seconds)</button>
+    <span id="score" style="margin-left:10px;color:var(--sub)">Score: 0</span>
+    <div class="game" id="arena"></div>
+  </section>
+
+  <section>
+    <h2>Pick a heart 💝</h2>
+    <div class="row"><button class="h">💗</button><button class="h">💗</button><button class="h">💗</button></div>
+    <div class="out" id="comp">Each heart hides something different.</div>
+  </section>
+
+  <section>
+    <h2>Anime nickname generator 🎌</h2>
+    <button id="nickBtn">Give me a nickname</button>
+    <div class="out" id="nick">Your legendary title awaits.</div>
+  </section>
+
+  <section>
+    <h2>How long have we been friends?</h2>
+    <input type="date" id="fdate"><button id="dayBtn">Count</button>
+    <div class="out" id="days">Pick the day our friendship began.</div>
+  </section>
+
+  <section>
+    <h2>Memory match 🧠</h2>
+    <button id="memBtn">Shuffle cards</button>
+    <div class="mem" id="memg"></div>
+    <div class="out" id="memo">Find all 4 pairs.</div>
+  </section>
+
+  <section>
+    <h2>Word scramble 🔤</h2>
+    <div class="out" id="scr" style="font-size:1.6rem;letter-spacing:4px;color:var(--ink)"></div>
+    <div class="pz"><input id="sIn" placeholder="Your answer" autocomplete="off"><button id="sBtn">Check</button><button id="sNext">Skip</button></div>
+    <div class="out" id="sOut"></div>
+  </section>
+
+  <section>
+    <h2>Riddle time 🤔</h2>
+    <div>I’m sweet and round, I have a hole in the middle, and you smile when I show up. What am I?</div>
+    <div class="pz"><input id="rIn" placeholder="Your guess" autocomplete="off"><button id="rBtn">Guess</button></div>
+    <div class="out" id="rOut"></div>
+  </section>
+
+  <footer>Made with 💗 by your friend, Suffian</footer>
+  <button class="tt" id="themeBtn" aria-label="Toggle dark mode">🌙</button>
 </main>
+
 <script>
+var PASSWORD="monica";
 function pick(a){return a[Math.floor(Math.random()*a.length)]}
+function $(id){return document.getElementById(id)}
 function rain(list){
   for(var i=0;i<14;i++){
     var s=document.createElement('div');
-    s.className='fl';
-    s.textContent=pick(list);
+    s.className='fl';s.textContent=pick(list);
     s.style.left=Math.random()*95+'vw';
     s.style.animationDuration=(3+Math.random()*3)+'s';
     document.body.appendChild(s);
     setTimeout(function(el){el.remove()},6500,s);
   }
 }
-var wishes=["May your days be as bright as your favorite shade of blue. 💙","Wishing you endless new chapters, both in manhwa and in real life. 📚","Thank you for being such a fun, kind friend. 🌟","May every episode you watch end on a perfect cliffhanger. 🎌","Here’s to many more snack runs and silly memories. 🍜"];
+function open_(){$('lock').classList.add('hidden');$('app').classList.remove('hidden');rain(['💗','✨','🌸','🎀']);}
+try{if(sessionStorage.getItem('mon')==='1')open_();}catch(e){}
+function tryPw(){
+  if($('pw').value.trim().toLowerCase()===PASSWORD){
+    try{sessionStorage.setItem('mon','1')}catch(e){}
+    open_();
+  }else{
+    $('msg').textContent='Oops, not quite. Try again 💭';
+    var b=$('lbox');b.classList.remove('shake');void b.offsetWidth;b.classList.add('shake');
+  }
+}
+$('go').onclick=tryPw;
+$('pw').onkeydown=function(e){if(e.key==='Enter')tryPw()};
+var last=0;
+document.addEventListener('pointermove',function(e){
+  if(e.pointerType==='touch')return;
+  var n=Date.now();if(n-last<70)return;last=n;
+  var t=document.createElement('div');t.className='tr';t.textContent=pick(['💗','✨','🌸']);
+  t.style.left=e.clientX+'px';t.style.top=e.clientY+'px';
+  document.body.appendChild(t);setTimeout(function(){t.remove()},800);
+});
+var wishes=["May your days be as bright as your favorite anime openings. 💗","Wishing you endless new chapters, both in manhwa and in real life. 📚","Thank you for being such a fun, kind friend. 🌟","Here’s to many more snack runs and silly memories. 🍜","May you always have a good show, a good snack and good people. 🎀"];
 var foods=["Crispy fries 🍟","A big bowl of ramen 🍜","Pizza slices 🍕","Soft, sweet dessert 🍰","Crunchy chips and chai 🍿","Biryani, obviously 🍛"];
-var modes=["Calm and clever strategist 💙","Energetic main character 🌟","Chill slice-of-life legend ☕","Unstoppable shonen hero 🔥","Cozy snack-loving sidekick 🍙"];
-document.getElementById('wishBtn').onclick=function(){document.getElementById('wish').textContent=pick(wishes);rain(['💙','✨','🌸']);};
-document.getElementById('foodBtn').onclick=function(){document.getElementById('food').textContent='Today we’re having: '+pick(foods);rain(['🍜','🍕','🍟','🍰']);};
-document.getElementById('modeBtn').onclick=function(){document.getElementById('mode').textContent='You are a '+pick(modes);rain(['⭐','💙','🎌']);};
+var modes=["Calm and clever strategist 💗","Energetic main character 🌟","Chill slice-of-life legend ☕","Unstoppable shonen hero 🔥","Cozy snack-loving sidekick 🍙"];
+var notes=["You’re more awesome than you realize. Keep shining! ✨","Bad day? Snack break, then one more episode. You’ve got this. 💪","Your energy makes people around you happier. Never lose it. 💗","Remember: you’re the main character of your own story. 🎌"];
+$('wishBtn').onclick=function(){$('wish').textContent=pick(wishes);rain(['💗','✨','🌸'])};
+$('foodBtn').onclick=function(){$('food').textContent='Today we’re having: '+pick(foods);rain(['🍜','🍕','🍟','🍰'])};
+$('modeBtn').onclick=function(){$('mode').textContent='You are a '+pick(modes);rain(['⭐','💗','🎌'])};
+$('secretBtn').onclick=function(){$('secret').textContent=pick(notes);rain(['🎁','💗','✨'])};
+$('meterBtn').onclick=function(){
+  $('fill').style.width='100%';
+  $('meter').textContent='Best friend level: MAX 💯 (still loading more fun…)';
+  rain(['💞','💗','🎀']);
+};
+var dark=false;
+$('themeBtn').onclick=function(){dark=!dark;document.documentElement.setAttribute('data-theme',dark?'dark':'light');this.textContent=dark?'☀️':'🌙'};
+var sc=0,gi=null,gt=null;
+$('gameBtn').onclick=function(){
+  clearInterval(gi);clearTimeout(gt);sc=0;$('score').textContent='Score: 0';$('arena').innerHTML='';
+  var left=15;
+  gi=setInterval(function(){
+    var a=$('arena'),b=document.createElement('button');
+    b.className='tg';b.textContent=pick(['🍩','🍕','🍙','🍰','🍓','🍟']);
+    b.style.left=Math.random()*(a.clientWidth-44)+'px';b.style.top=Math.random()*(a.clientHeight-44)+'px';
+    b.onclick=function(){sc++;$('score').textContent='Score: '+sc;b.remove()};
+    a.appendChild(b);setTimeout(function(){b.remove()},1100);
+  },550);
+  gt=setTimeout(function(){clearInterval(gi);$('arena').innerHTML='';$('score').textContent='Time’s up! You caught '+sc+' 🎉';rain(['🍩','💗','🍰'])},15000);
+};
+var comps=["You make every group chat funnier. 😂","Your energy is contagious in the best way. ⚡","You’re the kind of friend people are lucky to have. 💗"];
+var hs=document.querySelectorAll('.row .h');
+for(var i=0;i<hs.length;i++){(function(k){hs[k].onclick=function(){$('comp').textContent=comps[k];this.textContent='💖';rain(['💖','✨'])}})(i)}
+var n1=["Sparkle","Snack","Moonlight","Sakura","Thunder","Cosmic"],n2=["Queen","Slayer","Sensei","Princess","Champion","Wizard"];
+$('nickBtn').onclick=function(){$('nick').textContent='Monica, the '+pick(n1)+' '+pick(n2)+' ✨';rain(['🎌','✨','🌸'])};
+$('dayBtn').onclick=function(){
+  var v=$('fdate').value;if(!v){$('days').textContent='Pick a date first 💭';return}
+  var d=Math.floor((Date.now()-new Date(v).getTime())/86400000);
+  $('days').textContent=d<0?'That date is in the future! 😄':'We’ve been friends for '+d+' days, and counting. 💗';
+  if(d>=0)rain(['💗','🎀']);
+};
+var em=['🍜','🎌','💗','🍰'],fst=null,lk=false,mt=0,mv=0;
+function mem(){
+  var g=$('memg');g.innerHTML='';fst=null;lk=false;mt=0;mv=0;$('memo').textContent='Find all 4 pairs.';
+  em.concat(em).sort(function(){return Math.random()-.5}).forEach(function(e){
+    var b=document.createElement('button');b.className='mc';b.textContent='❓';
+    b.onclick=function(){
+      if(lk||b.classList.contains('on'))return;
+      b.classList.add('on');b.textContent=e;
+      if(!fst){fst=b;return}
+      mv++;
+      if(fst.textContent===e){fst=null;mt++;if(mt===4){$('memo').textContent='Solved in '+mv+' moves! 🎉';rain(['🎉','💗','✨'])}}
+      else{lk=true;var f=fst;fst=null;setTimeout(function(){f.classList.remove('on');f.textContent='❓';b.classList.remove('on');b.textContent='❓';lk=false},700)}
+    };
+    g.appendChild(b);
+  });
+}
+$('memBtn').onclick=mem;mem();
+var wd=[['NIAME','ANIME'],['SKCANS','SNACKS'],['DRIENF','FRIEND'],['HWNAAM','MANHWA']],wi=0;
+function showW(){$('scr').textContent=wd[wi][0];$('sIn').value='';$('sOut').textContent=''}
+$('sBtn').onclick=function(){
+  if($('sIn').value.trim().toUpperCase()===wd[wi][1]){$('sOut').textContent='Correct! 🎉';rain(['✨','💗']);wi=(wi+1)%wd.length;setTimeout(showW,1200)}
+  else $('sOut').textContent='Not quite, try again 💭';
+};
+$('sNext').onclick=function(){wi=(wi+1)%wd.length;showW()};
+$('sIn').onkeydown=function(e){if(e.key==='Enter')$('sBtn').onclick()};
+showW();
+$('rBtn').onclick=function(){
+  var v=$('rIn').value.trim().toLowerCase();
+  if(v==='donut'||v==='doughnut'||v==='a donut'||v==='a doughnut'){$('rOut').textContent='Yes, a donut! 🍩 Snack genius!';rain(['🍩','💗'])}
+  else $('rOut').textContent='Hmm, think sweet snacks. 🤔';
+};
 </script>
 </body>
 </html>
